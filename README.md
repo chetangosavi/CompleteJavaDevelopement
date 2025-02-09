@@ -35,6 +35,7 @@ CompletableFuture & Parallel Streams
 6. Java I/O & Serialization
 File Handling (BufferedReader, FileReader, FileWriter)
 Serialization & Deserialization
+
 Phase 2: Java Backend Development Foundations
 Duration: 1-2 Months
 
@@ -50,6 +51,7 @@ JSP Basics (Scriptlets, Expressions, Directives)
 9. Introduction to Build Tools
 Maven & Gradle (Dependency Management)
 Project Structure & POM.xml
+
 Phase 3: Spring Boot & Microservices
 Duration: 2-3 Months
 
@@ -80,6 +82,7 @@ OAuth2 Authentication
 Logging with Log4j & SLF4J
 Actuator for Monitoring in Spring Boot
 Application Metrics (Prometheus, Grafana)
+
 Phase 4: Advanced Backend Concepts
 Duration: 2-3 Months
 
@@ -101,6 +104,7 @@ Deploying Java Apps to Kubernetes
 19. CI/CD & Deployment
 CI/CD Pipelines with GitHub Actions & Jenkins
 Deploying Java Apps on AWS, Azure, or GCP
+
 Phase 5: System Design & Optimization
 Duration: Ongoing Learning
 
