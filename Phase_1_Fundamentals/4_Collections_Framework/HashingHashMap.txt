@@ -1,0 +1,35 @@
+HashMap : 
+            - converts keys into unordered hash values for fast lookups
+
+    + In Java, a HashMap is a data structure that stores key-value pairs and allows for efficient data retrieval based on keys. 
+      To achieve this efficiency, HashMap utilizes a technique called hashing.
+
+    + Hashing Process:
+
+        + Hash Code Generation: 
+            When a key is added to a HashMap, the hashCode() method of the key object is invoked to generate an integer hash 
+            code. This hash code represents the key's identity in a numeric form.
+
+        + Index Calculation: 
+            The hash code is then processed to determine the index in the internal array (often referred to as the "bucket array") 
+            where the key-value pair will be stored. This is typically done using a bitwise AND operation:
+
+            int index = (n - 1) & hash;
+
+            Here, n is the length of the bucket array, and hash is the processed hash code. This operation ensures that 
+            the index falls within the array's bounds.
+
+        + Storage in Buckets: 
+            The HashMap uses an array of buckets, where each bucket can hold multiple key-value pairs. If multiple keys 
+            hash to the same index (a situation known as a "collision"), the HashMap stores these entries in a linked 
+            list or a binary tree within the same bucket.
+
+    + Unordered Nature:
+
+        It's important to note that the order of elements in a HashMap is not guaranteed. The placement of key-value 
+        pairs is determined by their hash codes and the internal structure of the HashMap. Therefore, when iterating 
+        over a HashMap, the entries may appear in any order, and this order can change when the HashMap is modified.
+
+    + In summary, a HashMap converts keys into hash values using their hashCode() method to determine their storage 
+      location within an internal array. This mechanism allows for fast lookups, but it also means that the order of 
+      elements is inherently unordered and can change over time.

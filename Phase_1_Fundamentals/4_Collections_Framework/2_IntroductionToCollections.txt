@@ -1,0 +1,100 @@
+Introduction To Collections in Java : 
+    + There are three basic types of Collections in java:
+        - Collections allows us to grow shrink and rearange data efficiently;
+
+        1> Lists
+        2> Map
+        3> Sets 
+
+    + Basic difference between collection and Array :
+        - Collections does not allow storing of primitive type but only an Object <Generics>
+
+    + List :
+        - List is Sequence of objects that can shrink and grow
+        - making it flexible for various Programming needed
+
+        1> ArrayList:
+                - same as array but comes with some built in methods
+                - can grow and shrink dynamically
+
+        2> Stack:
+                - Works on LIFO : last in first out principle
+                - methods used like push, pop, peak
+        
+        3> LinkedList :
+                - chain of item linked together
+                - ideal for managing ordered collection of data
+
+
+    + Map :
+        - are collection of key value pair, where each key is used to find corresponding value / object
+        - can contain duplicates
+
+        1> HashMap : 
+            - converts keys into unordered hash values for fast lookups
+
+        2> LinkedHashMap :
+            - just like hashmap but objects are ordered by insertion 
+
+        3> TreeMap :
+            - treemaps are naturally ordered
+
+    + Sets :
+
+        1> HashSet :
+            - has unique key value pairs with no duplicate Elements
+
+        2> LinkedHashSet :
+            - Contains unique insertion ordered elements its just like hash set accept ordering of elements 
+              (order of element stays in the same manner as they are inserted)
+
+        3> TreeSet :
+            - TreeSet are naturally ordered
+
+
+
+    NOTE :
+
+            - lists are great for managing ordered Sequences of element
+            - Map are great for storing and retriving data using key value pairs 
+            - Sets are great for storing data where no duplicate element are allowed
+
+
+    METHODS :
+
+        LIST : 
+
+                add(Object obj)  -> appends an element into list
+                size() -> returns size of list
+                clear(Object obj) -> removes all the objects from list
+                remove(Object obj) -> removes the first occurance of object
+                get(index) -> returns element at specific index
+
+            + when we do not use generics while initialising arraylist it by default returns obj of Object class.
+                Ex :
+
+                        ArrayList arrList = new ArrayList();
+                        Object obj = arrList.get(1);   --> Returns Object Type 
+                        String str = (String)obj;    --> Casting to String Type(only works when you know the type)
+                                    \
+                                    might throw classCastException
+
+                            To Solve this problem java introduced generics 
+
+    + Generics in Java : Generic ensures type safety in Collections
+
+        <> -> Generic Designator
+        Ex :
+
+            ArrayList<String>  list = new ArrayList<>();
+
+        Primitive Types         ------     Generics(object)
+            int                              Integer
+            double                           Double
+            String                           String
+
+    Note :
+
+        - Eliminates TypeCasting
+        - reduce errors
+        - reuseablity and clear code(Readability)

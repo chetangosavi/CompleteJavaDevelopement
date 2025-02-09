@@ -1,0 +1,4 @@
+ArrayList :
+    - ArrayList is a resiable array implementation with the java collection Framework
+    - it is a part of java.util package
+    

@@ -1,0 +1,20 @@
+Collections does not allow storing of primitive type but only an Object. ?
+->
+    Concept of Autoboxing and Unboxing :
+
+        In Java, the term "primitive types" refers to the most basic data types built into the language, 
+        such as int, char, boolean, float, and others. These types are not objects and do not inherit from 
+        the Object class. On the other hand, Java's Collections Framework—comprising interfaces like List, 
+        Set, and Map—is designed to work with objects. As a result, collections cannot directly store 
+        primitive types.
+
+        To bridge this gap, Java provides wrapper classes for each primitive type. For example, the Integer 
+        class serves as a wrapper for the int primitive type, and Double wraps double. These wrapper classes 
+        are objects and can be stored in collections. Java offers a feature called autoboxing, which automatically 
+        converts primitives to their corresponding wrapper class objects when needed. Conversely, unboxing 
+        converts wrapper class objects back to primitives. For instance, when adding an int to a List<Integer>, 
+        autoboxing converts the int to an Integer object automatically. 
+        
+        It's important to note that while autoboxing simplifies the interaction between primitives and objects, 
+        it can introduce performance overhead due to the additional boxing and unboxing operations. 
+        Therefore, in performance-critical applications, it's essential to be mindful of this overhead.

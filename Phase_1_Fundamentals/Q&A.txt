@@ -1,0 +1,33 @@
+1> What is difference between Map and Set in Java ?
+-> Key Differences:
+    Structure:
+        Set: Stores individual, unique elements.
+        Map: Stores key-value pairs, with unique keys mapping to values.
+    Access:
+        Set: Elements are accessed directly.
+        Map: Values are accessed via their associated keys.
+    Usage:
+        Set: Ideal when you need to maintain a collection of unique items.
+        Map: Suitable for scenarios where data needs to be retrieved or stored based on a unique identifier (key).
+
+
+2> Difference between HashMap, LinkedHashMap, TreeMap ?
+->
+    1. HashMap:
+        Ordering: Does not maintain any order of its entries.
+        Performance: Offers constant-time performance (O(1)) for insertion and lookup operations, assuming a good hash function.
+        Null Handling: Allows one null key and multiple null values.
+        Use Case: Suitable for general-purpose use when order is not a concern.
+
+    2. LinkedHashMap:
+        Ordering: Maintains the insertion order of entries.
+        Performance: Similar to HashMap, with a slight overhead due to the maintenance of the linked list that preserves order.
+        Null Handling: Allows one null key and multiple null values.
+        Use Case: Ideal when you need a map that maintains the order of entries as they were added.
+
+    3. TreeMap:
+        Ordering: Maintains entries in a sorted order based on the natural ordering of keys or a specified comparator.
+        Performance: Provides logarithmic time (O(log n)) for insertion and lookup operations due to its underlying 
+            Red-Black tree structure.
+        Null Handling: Does not allow null keys but permits multiple null values.
+        Use Case: Suitable when a sorted map is required.
