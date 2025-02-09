@@ -1,0 +1,31 @@
+🔟 Spring Framework & Spring Boot
+    Introduction to Spring Framework
+    Dependency Injection & IoC Container
+    Spring Boot Setup & Configuration
+    Spring Boot Annotations (@Component, @Service, @Repository, @RestController)
+    Spring Boot Application Lifecycle
+
+1️⃣1️⃣ RESTful Web Services with Spring Boot
+    Creating REST APIs
+    @RequestMapping, @GetMapping, @PostMapping
+    Path Variables & Query Parameters
+    Exception Handling in REST APIs (@ControllerAdvice, @ExceptionHandler)
+    Validation with @Valid & @Validated
+
+1️⃣2️⃣ Spring Data JPA & Hibernate
+    Introduction to ORM (Object-Relational Mapping)
+    JPA Annotations (@Entity, @Table, @Column, @Id, @GeneratedValue)
+    Spring Data JPA Repository
+    Pagination & Sorting
+    Lazy vs. Eager Loading
+
+1️⃣3️⃣ Security in Java Backend
+    Authentication & Authorization
+    Spring Security Basics
+    JWT (JSON Web Token) Authentication
+    OAuth2 Authentication
+    
+1️⃣4️⃣ Logging & Monitoring
+    Logging with Log4j & SLF4J
+    Actuator for Monitoring in Spring Boot
+    Application Metrics (Prometheus, Grafana)

@@ -1,0 +1,22 @@
+1️⃣5️⃣ Microservices Architecture
+    Monolith vs. Microservices
+    Service Communication (REST, gRPC)
+    Service Discovery (Eureka)
+    Load Balancing with Spring Cloud LoadBalancer
+
+1️⃣6️⃣ API Gateway & Circuit Breaker
+    API Gateway (Spring Cloud Gateway)
+    Rate Limiting & Authentication
+    Resilience with Circuit Breaker (Resilience4j, Hystrix)
+
+1️⃣7️⃣ Asynchronous Communication in Microservices
+    Kafka & RabbitMQ (Message Queues)
+    Event-Driven Architecture
+
+1️⃣8️⃣ Docker & Kubernetes
+    Containerizing Java Apps with Docker
+    Deploying Java Apps to Kubernetes
+    
+1️⃣9️⃣ CI/CD & Deployment
+    CI/CD Pipelines with GitHub Actions & Jenkins
+    Deploying Java Apps on AWS, Azure, or GCP

@@ -1,0 +1,33 @@
+1️⃣ Core Java Basics
+    Introduction to Java & Setup (JDK, JRE, JVM)
+    Data Types, Variables, and Operators
+    Control Statements (if-else, loops, switch-case)
+    Methods and Functions in Java
+
+2️⃣ Object-Oriented Programming (OOP)
+    Classes and Objects
+    Constructors & Overloading
+    Encapsulation, Inheritance, Polymorphism, Abstraction
+    Interfaces & Abstract Classes
+    Static vs. Instance Members
+
+3️⃣ Exception Handling
+    Try-Catch-Finally
+    Throw & Throws
+    Custom Exceptions
+
+4️⃣ Collections Framework
+    Lists (ArrayList, LinkedList)
+    Sets (HashSet, TreeSet)
+    Maps (HashMap, TreeMap)
+    Queues (PriorityQueue, Deque)
+
+5️⃣ Multithreading & Concurrency
+    Threads & Runnable Interface
+    Synchronization & Locks
+    Executor Framework
+    CompletableFuture & Parallel Streams
+
+6️⃣ Java I/O & Serialization
+    File Handling (BufferedReader, FileReader, FileWriter)
+    Serialization & Deserialization

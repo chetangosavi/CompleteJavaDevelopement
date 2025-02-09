@@ -1,0 +1,14 @@
+7️⃣ JDBC (Java Database Connectivity)
+    Connecting Java with MySQL/PostgreSQL
+    CRUD Operations using JDBC
+    Connection Pooling (HikariCP, C3P0)
+
+8️⃣ Introduction to Servlets & JSP
+    HTTP Protocol & HTTP Methods (GET, POST, PUT, DELETE)
+    Servlets (Lifecycle, Request & Response)
+    Session Management (Cookies, URL Rewriting, HttpSession)
+    JSP Basics (Scriptlets, Expressions, Directives)
+    
+9️⃣ Introduction to Build Tools
+    Maven & Gradle (Dependency Management)
+    Project Structure & POM.xml
