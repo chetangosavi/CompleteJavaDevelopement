@@ -1,4 +1,41 @@
 ArrayList :
     - ArrayList is a resiable array implementation with the java collection Framework
     - it is a part of java.util package
-    
+    - it allow you to store Sequencially and allows insertion and removal dynamically
+    - flexibility to adjust size dynamically
+
+
+    Syntax :
+
+        import java.util.ArrayList;
+        ArrayList<WrapperClass> arrayListName = new ArrayList<>(initialCapacity);
+              initialCapacity - is Optionals
+
+        Creating Copy Of ArrayList :
+
+            ArrayList<Inetegr> numbers = new ArrayList<>();
+            numbers.add(1);
+            numbers.add(2);
+            numbers.add(3);
+
+            ArrayList<Integer> copyOfNumbers = new ArrayList<>(numbers);
+                                                                 /
+                                            This will copy existing ArrayList into new
+
+
+        Adding Element into ArrayList:
+
+            add(object);
+            add(index,object);
+
+        Some Build in Methods :
+
+            size() -> returns size of ArrayList
+            contains(element) -> checks if element is present in array list or not(Type - boolean)
+            isEmpty() -> checks if arraylist is empty or not(boolean)
+            set(index,element) -> used to replace element at specific index
+            get(index) -> retruns element
+            equals() ->checks for equality (boolean)
+            addAll() -> copy all element from one list into another list
+            remove(element) -> removes element from ArrayList
+            indexOf() ---> returns index of specific element
