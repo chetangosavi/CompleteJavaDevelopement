@@ -1,13 +1,15 @@
 Introduction To Collections in Java : 
     + There are three basic types of Collections in java:
-        - Collections allows us to grow shrink and rearange data efficiently;
+        - Collections allows us to grow shrink and re-arrange data efficiently;
 
-        1> Lists
+        1> List
         2> Map
-        3> Sets 
+        3> Set
 
     + Basic difference between collection and Array :
-        - Collections does not allow storing of primitive type but only an Object <Generics>
+        - Collections does not allow storing of primitive type<int double boolean> but only an Object <Generics>
+        - Java offers a feature called autoboxing, which automatically converts primitives to their corresponding wrapper 
+          class objects when needed. Conversely, unboxing converts wrapper class objects back to primitives.
 
     + List :
         - List is Sequence of objects that can shrink and grow

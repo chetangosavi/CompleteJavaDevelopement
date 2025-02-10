@@ -1,0 +1,28 @@
+import java.sql.*;
+
+class FirstJDBCConnection{
+    class public static void main(String[] args){
+        try{
+                //Loading Driver;
+                Class.forName("com.mysql.cj.jdbc.Driver");
+
+                //Create connection
+                Connection con = DriverManager.getConnection("url","username","password");
+                        + url = jdbc:mysql://localhost:3306/databaseName;
+
+                //Create Query
+                String query = "Select * From Students";
+                Statements stmt = con.createStatement();
+                ResultSet set = stmt.executeQuery(q)
+
+                //process data 
+                while(set.next()){
+                    String name = set.getString(1);
+                    int id = set.getInt("Chetan");
+                }
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }    
+}

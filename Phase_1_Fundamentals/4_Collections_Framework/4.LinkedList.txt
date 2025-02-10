@@ -1,0 +1,32 @@
+LinkedList :
+
+    what is LinkedList ?
+    -> LinkedList arranges data into sequenc similar to stations along the train root
+    - LinkedList is made up of nodes and ther connection 
+    - flexible data Management
+    - easy manipulation 
+    - maintains intigrity
+    ___________              _____________
+    |  node 1 | -----------  |   node2   |
+    |_________|              |___________|
+
+    Node :   __________________
+            | Value  | address |    
+            |________|_________|
+
+    + A linked list is a data structure that allows you to store a sequence of elements called nodes. 
+      Each node holds two critical pieces of information: the data itself and a reference (or link) to 
+      the next node in the sequence. This setup forms a chain-like structure, where each node knows how to 
+      find the next one.
+
+    + When to use linkedlist vs arraylist:
+		 
+		 	ArrayList - when retrival of data is priority rather than just insertion and deletion
+		 	else use LinkedList
+		 	
+		+ Syntax to create linkedlist:
+                LinkedList li = new LinkedList(); --> Custome
+		 		LinkedList<Integer> li = new LinkedList<>();
+    
+
+    
