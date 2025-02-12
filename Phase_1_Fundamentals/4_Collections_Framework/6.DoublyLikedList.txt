@@ -1,0 +1,50 @@
+Doubly LinkedList :
+    - Moves forward as well as backward
+    - Node Structure has [previous | value | next]
+
+
+    + Building blocks of the list: nodes
+        - At the core of a doubly linked list are nodes, the individual train carriages. Each node has the following:
+        - Data: This is like the cargo or passengers in the train carriage that the node is carrying.
+        - Next: A reference to the next node in the sequence, which is like the train carriage ahead.
+        - Previous: A reference to the previous node, which is like the train carriage behind.
+
+
+        private static class Node {
+            int data;
+            Node next;
+            Node prev;
+
+            // Constructor to create a new node
+            Node(int data) {
+                this.data = data;
+                this.next = null;
+                this.prev = null;
+            }
+        }
+    - The integer variable data indicates that the node holds a whole number. The reference variable next of type Node 
+      points to the next node, while prev points to the previous node.
+    - The parameterized constructor in the Node class initializes a new node with the provided data and sets both next 
+      and prev to null, as the new node is not yet linked to other nodes in the doubly-linked list.
+
+    + The list structure: head and tail
+        Using the train line analogy, the head is the first carriage, and the tail is the last carriage. When you first 
+        create the list, both the head and tail are null because the train hasn't been assembled yet, and there are no 
+        carriages on the track.
+
+    + After adding some carriages to the train, the list would look as shown in the diagram below:
+
+        [prev|data|next]<-->[prev|data|next]<-->[prev|data|next]<-->[prev|data|next]
+            Head                                                         Tail
+
+        --Starting from the head, you can move forward through the list by following the next pointers (next -->).
+        --Starting from the tail, you can move backward through the list by following the prev pointers (  <-- prev).
+
+    + Adding to the front
+        Imagine you want to attach a new car at the front of the train. Here’s how your list starts:
+
+    Step 1: Create a new node with the data, for example, 1: 
+    Step 2: If the list is empty, both head and tail must refer to this new node because it will be the only 
+            node on the list. For example, initially, your list is empty, so this is how the head and tail refer to your new node:
+    Step 3: Suppose the list isn’t empty. For example, currently, your list looks like this after adding a node with data value 1:
+
