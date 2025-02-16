@@ -39,12 +39,34 @@ Doubly LinkedList :
 
         --Starting from the head, you can move forward through the list by following the next pointers (next -->).
         --Starting from the tail, you can move backward through the list by following the prev pointers (  <-- prev).
+    + Methods :
+        + ADDING :
+            add() - adds element into list
+            addFirst() - add element at first/head position
+            addlast() - add element at last/tail position
+            add(index,value) -> add element at specific index
 
-    + Adding to the front
-        Imagine you want to attach a new car at the front of the train. Here’s how your list starts:
+        + REMOVING :
+            removeFirst() -> deletes the first step
+            removeLast() -> deletes the last step.
+            remove(element) -> removes a step from any specific position, helping you manage the recipe’s flow as you see fit.
 
-    Step 1: Create a new node with the data, for example, 1: 
-    Step 2: If the list is empty, both head and tail must refer to this new node because it will be the only 
-            node on the list. For example, initially, your list is empty, so this is how the head and tail refer to your new node:
-    Step 3: Suppose the list isn’t empty. For example, currently, your list looks like this after adding a node with data value 1:
+    + The ListIterator provides several useful methods:
 
+        - next(): Moves the iterator to the next element in the list and returns that element. The ListIterator 
+          keeps track of its current position internally, so each call to next() automatically moves it forward 
+          by one step. Since it changes the iterator's position, it’s essential to ensure a 'next' element is available.
+
+        - hasNext(): Checks if there is an element ahead in the list, allowing you to move forward safely. Before 
+          using the next() method, you should call hasNext(), which This method returns true if there are more elements 
+          to traverse, and false if you've reached the end of the list.
+
+        - previous(): Moves the iterator to the previous element and returns that element. The ListIterator keeps 
+          track of its current position internally, so each call to previous() automatically moves it backward by 
+          one step. Since it changes the iterator's position, it’s essential to ensure a 'previous' element is available.
+
+        - hasPrevious(): Checks if there is an element behind the current position, enabling backward traversal. 
+          If hasPrevious() returns true, you can safely use the previous() method to move the iterator backward 
+          and access the previous element. 
+
+    
