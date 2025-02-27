@@ -1,4 +1,8 @@
-import java.sql.*;
+
+JDBC - Java Database Connectivity Its an API Developed by Oracle and Maintained By Oracle
+     - Used For Databse Connection 
+
+import java.sql.*;   //first step is to import java.sql package
 
 class FirstJDBCConnection{
     class public static void main(String[] args){
