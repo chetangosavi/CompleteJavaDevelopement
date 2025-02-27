@@ -29,12 +29,12 @@ ArrayList :
             add(index,object);
 
         Some Build in Methods :
-
+            add()
             size() -> returns size of ArrayList
             contains(element) -> checks if element is present in array list or not(Type - boolean)
             isEmpty() -> checks if arraylist is empty or not(boolean)
             set(index,element) -> used to replace element at specific index
-            get(index) -> retruns element
+            get(index) -> retruns element at specific index
             equals() ->checks for equality (boolean)
             addAll() -> copy all element from one list into another list
             remove(element) -> removes element from ArrayList

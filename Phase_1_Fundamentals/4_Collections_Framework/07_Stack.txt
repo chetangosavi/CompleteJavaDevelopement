@@ -1,0 +1,29 @@
+Stack :
+    - Is a data structure -class name : Stack
+    - Operates on LIFO principle (Last in first out)
+    - Stack class is present in java
+
+    Operations on Stack :
+
+        push
+        pop
+        peek
+        isEmpty
+
+    Exploring creating Stack : with the help of stack class
+
+        - stack class is present in java.util package
+
+        //importing stack class
+
+        import java.util.Stack
+
+    //creating object of stack class
+
+        Stack<Integer> st = new Stack<>();
+
+        // You can create stacks for other data types as well
+        Stack<String> stringStack = new Stack<>();
+        Stack<Double> doubleStack = new Stack<>();
+
+        This creates a stack, but to add elements to it, you need to use the push() operation. Let’s dig into this operation next.
