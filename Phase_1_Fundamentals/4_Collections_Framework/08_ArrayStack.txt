@@ -78,3 +78,24 @@ public class ArrayStack {
 	}
 
 }
+
+// pros and cons:
+	- fixed size   -----> main limitation Resizing takes time
+	- Easy access
+	- straight forward
+
+//Time complexity of Array based stack:
+
+	push/pop/peek generally -> o(1)
+
+	when array is full and need to resizing -> o(n)
+	due to time required to copy array 
+
+
+//LinkedList based:
+
+	push/pop/peek consistently - o(1)
+	ideal for scenerios unpredicatable stack size
+	 
+
+

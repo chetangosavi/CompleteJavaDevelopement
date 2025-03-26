@@ -1,0 +1,150 @@
+HashMap:
+    - Rapidly locates item in large data collection
+
+    Identifier:  An identifier is a string of character or number that uniquely
+    identifies a person place or thing.
+
+    what is hashmap?
+    -> hashmap is collection of key value pairs a key is a unique identifier
+       and a value is the information associated with that identifier.
+
+
+
+    + package:
+
+        import java.util.HashMap;
+
+        public class songMap{
+            public static void main(String[] args){
+
+                HashMap<String,String> songlist = new HashMap<>();
+
+
+            }
+        }
+
+    - HashMap are unordered designed for quick value retrival and not for maintaining order
+    - Key must be unique ( in case 2 keys are same the value of first key will be overriden with new value)
+     
+
+
+    + HashMap basic operations:
+
+    + Map Functions:
+
+            put() -> put values into map
+            get() -> to get value from map
+            replace() -> replace the value into map
+
+        + what is the difference between put and replce? 
+        -> put modifies the hashmap if key value is not present and returns null where as replace behaves 
+           differntly it does not modify hashmap when key is not presnt in hashmap
+
+        + replace is used when we dont want to add new key value pair in hashmap and only reaplce existing data
+
+
+            containsKey() -> checks if key is present in map or not returns boolean value
+            size() -> returns size of map as int value
+            clear() -> Deleted all the pairs form hashmap
+            isEmpty() -> checks if hashmap is empty or not returns boolean value
+
+
+    + HashMap Iteration :
+
+        Two methods : 1> keySet() - Iterates through the keys and retrieves values using the get() method.
+                      2> entrySet() - Iterates through the key-value pairs directly.
+
+            
+        Iterates using keySet() :
+
+            Set<String> keys = map.keySet();
+            for(String key : keys){
+                String value = map.get(key);
+                System.out.println("ID: ",key,"Value: ",value);
+            }
+
+            + The Map interface is used to represent the general concept of a key-value pair collection. 
+            By coding to the Map interface, you're following a principle of programming to an interface, 
+            not an implementation, which promotes flexibility and abstraction. This means you can switch 
+            to another Map implementation (like TreeMap, LinkedHashMap, etc.) without changing the rest of your code.
+
+
+            + Notice that the key-value pairs in the output are not listed in the order in which they were added to the 
+            HashMap. That’s because the HashMap does not maintain a configurable or predictable order. While the HashMap 
+            does not maintain a specified order, other collections do, such as the LinkedHashMap and the TreeMap.
+
+        Iterates Using entrySet() :
+
+            Set entries = map.entrySet();
+            for(Object entry: entries){
+                Map.Entry mapEntry = (Map.Entry)entry;
+                Object key = mapEntry.getKey();
+                Object value = mapEntry.getValue();
+                System.out.println("ID: ",key,"Value: ",value);
+            }
+
+            Here, each Map.Entry object is a unique key-value pair, allowing you to work with both the keys 
+            and the values without making more calls to the HashMap.  
+
+            Using the entrySet() method has its advantages and disadvantages.
+
+            + Advantages
+
+            Efficiency: The entrySet() method provides direct access to both keys and values without needing 
+                        additional lookups, making it more efficient than the keySet() method.
+            Comprehensive: The entrySet() method is useful when working with both keys and values is required.
+
+            + Disadvantages
+
+            Complexity: The entrySet() method is slightly more complex than the keySet() method, as it 
+            requires an understanding of Map.Entry.
+
+            When to use
+
+            Large maps:  The entrySet() method is ideal for larger maps where performance is a concern due to the 
+                         efficiency of accessing key-value pairs directly.
+            Full pair processing: When you need to process both keys and values together, making it easier to handle 
+                                  both elements in a single iteration.
+
+
+        + How hashmap works:
+
+            - key hashed to index in its internal array
+            - Quick access via get method when we call get method is hashes key and retrives value
+            - Direct lookup in internal array
+
+        + Time Complexity : constant time operation for lookups in hashmap
+
+        + capcity and Memory use :
+
+            - Extra Memory : arrya storage  
+            - Initially it starts with capcity of 16 key value pairs as it exceeds it double in size
+              requires extra Memory
+
+        + Ideal Use :
+
+            - Caching 
+            - Counting frequency
+            - Quick lookups
+            - Grouping data
+
+        + Best Choices :
+
+            - Fast Lookups
+            - Dynamic Data Set
+            - Low collision rate
+
+        + Tradeofs 
+
+            - uses more memory than other collections
+            - if memory usage is a concern consider other collections such as array arraylist LinkedList
+
+        + Choosing the right structure :
+
+            - frequency of operations
+            - Memory usage/Constraints
+            - Uniform keys 
+            
+
+
+

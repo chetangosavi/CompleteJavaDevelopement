@@ -1,0 +1,26 @@
+Queue :
+
+    FIFO -  First In First Out
+    - Follows fifo principle
+
+    Practical application of queue :
+        - CPU scheduling
+        - Handling I/O request
+        - printer spoling
+        - networking
+
+
+    Queue Working :
+
+    task 1 ---\
+    task 2 ---| ----> | Queue | --  task 3, task 2, task1 --> CPU
+    task 3 ---/
+
+    Queue -
+        - Linear DataStructure that stores data in ordered sequence
+        - element are added at back and remove from front
+        - ideal for asynchronous data, cpu scheduling
+        - operation 
+            enqueue() -> add element at rear position(back)
+            dequeue() -> remove element from front
+            peek() -> check whats at top without disturbing sequence
