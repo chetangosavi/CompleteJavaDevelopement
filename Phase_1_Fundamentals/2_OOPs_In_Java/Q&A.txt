@@ -1,0 +1,9 @@
+1> Why Can't We Override Static Methods in Java?
+->  Static methods belong to the class, not to an instance (object). Method overriding is based on 
+    runtime polymorphism (dynamic method dispatch), which works with instances of classes, not classes themselves. 
+    Since static methods are resolved at compile-time and not based on the object type, they cannot be overridden.
+
+to learn :
+
+    sorting collection of exmployee object :
+    future object / Multithreading in detail blocking or non blocking concepts

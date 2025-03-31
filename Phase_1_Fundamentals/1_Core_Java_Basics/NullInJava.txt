@@ -1,0 +1,57 @@
+NULL :
+    In Java, null is a special literal that represents the absence of a value or a reference 
+    that does not point to any object. It is the default value of uninitialized object references.
+
+    🔹 Key Points About null in Java
+            1> null can be assigned to any reference type (objects, arrays, interfaces, String).
+
+            2> Primitive types (int, double, boolean, etc.) cannot be null.
+
+            3> If you try to call a method on a null reference, you will get a NullPointerException (NPE).
+
+            4> null does not have a type, but it is compatible with all non-primitive data types.
+
+    Understanding Method Overloading :
+        In Java, method overloading allows multiple methods with the same name but different parameter lists 
+        (different types or number of arguments).
+    
+    public class text{
+			public static void main(String[] args) {
+				method(null);
+			}
+			public static void method(Object o) {
+				System.out.println("am another object method");
+			}
+			public static void method(String s) {
+				System.out.println("am string method");
+			}
+		}
+
+    -> code demonstrates method overloading in Java, where two methods have the same name (method) 
+       but different parameter types (Object and String). 
+
+    + Which Method Gets Called?
+            In method overloading, Java chooses the most specific method. Since String is a subclass of Object, 
+            the method with String as a parameter is more specific than the one with Object.
+
+    + If the method(String s) was removed, then Java would only have:
+    -> Output : am another object method
+       because null can be assigned to an Object
+
+    + What if There Were More Overloaded Methods?
+    -> Now, calling method(null); would cause a compilation error because Java can't decide between String 
+       and StringBuilder—both are equally specific.
+
+     Key Takeaways
+        Method Overloading: Allows multiple methods with the same name but different parameters.
+
+        Null Argument Resolution:
+
+            If null matches multiple overloaded methods, Java picks the most specific type.
+            If two methods are equally specific, Java throws a compilation error.
+        
+        Method Selection Order:
+            Java prefers exact matches first.
+            If no exact match, it picks the nearest possible superclass.
+            If ambiguity arises, compilation fails.
+
