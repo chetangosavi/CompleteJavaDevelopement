@@ -1,0 +1,28 @@
+RestTemplate: 
+
+        @> What is RestTemplate in Spring Boot?
+        ->  RestTemplate is a synchronous HTTP client in Spring that allows your application to make HTTP 
+            requests (GET, POST, PUT, DELETE, etc.) to RESTful web services.
+
+        1> Pojo for response : 
+        2> Instance in main : ProjectName.class
+                @Bean
+                public RestTemplate restTemplate() {
+                    return new RestTemplate();
+                }
+
+        3> RestTemplate in Service class:
+
+                ResponseEntity<WeatherResponse> response  = restTemplate.exchange(finalAPI, HttpMethod.GET,null, WeatherResponse.class );
+		        WeatherResponse body = response.getBody();
+
+                  - finalAPI -> final API String
+                  - HttpMethod -> sending method Type
+                  - null
+                  - WeatherResponse -> class to convert response into (Deserialization)
+
+        Why is RestTemplate Deprecated?
+        ->  Spring recommends using WebClient (from spring-webflux) instead of RestTemplate, because:
+                > RestTemplate is blocking (synchronous) → Slower performance for concurrent requests
+                > WebClient is non-blocking (asynchronous) → Better for reactive applications.
+            - But if you are using Spring Boot with synchronous APIs, RestTemplate is still fine.

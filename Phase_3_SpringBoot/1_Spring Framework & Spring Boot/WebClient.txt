@@ -1,0 +1,82 @@
+Introduction to WebClient in Spring Boot
+    -> WebClient is the modern, non-blocking and reactive alternative to RestTemplate in Spring WebFlux. 
+       It allows you to make asynchronous HTTP requests with better performance.
+
+
+    Step 1: Add Dependencies
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+    Step 2: Create a WebClient Bean
+        @Bean
+        public WebClient webClient() {
+            return WebClient.builder().build();
+        }
+
+    Step 3: Use WebClient to Make API Calls
+
+        > GET Request (Fetching Data)
+
+            import org.springframework.stereotype.Service;
+            import org.springframework.web.reactive.function.client.WebClient;
+            import reactor.core.publisher.Mono;
+
+            @Service
+            public class WeatherService {
+
+                private final WebClient webClient;
+
+                private static final String API_URL = "https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}";
+
+                private static final String API_KEY = "your_api_key_here";
+
+                public WeatherService(WebClient webClient) {
+                    this.webClient = webClient;
+                }
+
+                public Mono<WeatherResponse> getWeather(String city) {
+                    return webClient.get()
+                            .uri(API_URL, city, API_KEY)
+                            .retrieve()
+                            .bodyToMono(WeatherResponse.class);
+                }
+            }
+
+        > POST
+
+            public Mono<Post> createPost(Post post) {
+                return webClient.post()
+                        .uri("https://jsonplaceholder.typicode.com/posts")
+                        .bodyValue(post)
+                        .retrieve()
+                        .bodyToMono(Post.class);
+            }
+
+    Step 4: Call WebClient in Controller
+
+        import org.springframework.web.bind.annotation.*;
+        import reactor.core.publisher.Mono;
+
+        @RestController
+        @RequestMapping("/weather")
+        public class WeatherController {
+
+            private final WeatherService weatherService;
+
+            public WeatherController(WeatherService weatherService) {
+                this.weatherService = weatherService;
+            }
+
+            @GetMapping("/{city}")
+            public Mono<WeatherResponse> getWeather(@PathVariable String city) {
+                return weatherService.getWeather(city);
+            }
+        }
+
+
+    Final Thoughts
+        WebClient is the modern alternative to RestTemplate (better performance).
+        Ideal for high-performance, non-blocking applications.
+        Returns Mono<T> or Flux<T>, making it compatible with reactive programming.

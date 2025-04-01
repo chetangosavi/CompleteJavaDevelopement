@@ -1,0 +1,14 @@
+@PostContruct Annotation: This is Like useEffect() in React
+
+        The @PostConstruct annotation is used in Spring Boot to indicate that a method should run after 
+        dependency injection is complete but before the class is used.
+
+    When to Use @PostConstruct?
+        > When you need to initialize resources after all dependencies are injected.
+        > When you want to run startup logic only once.
+        > When you need to preload data from a database or an API.
+
+    Important Notes
+        Runs only once after bean creation.
+        Does not run if the bean is not used.
+        @PostConstruct is part of jakarta.annotation (Spring Boot 3+).
