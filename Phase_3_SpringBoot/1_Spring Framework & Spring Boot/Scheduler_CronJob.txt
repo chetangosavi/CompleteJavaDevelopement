@@ -1,0 +1,59 @@
+Corns: Scheduler
+    - In Spring Boot, cron jobs are scheduled tasks that execute at fixed intervals or at specific times. 
+      You can use the @Scheduled annotation to define cron jobs.
+
+    1. Enable Scheduling
+        First, enable scheduling in your Spring Boot application by adding the @EnableScheduling annotation 
+        in your main application class
+
+    Ex :
+        @SpringBootApplication
+        @EnableScheduling  // Enables scheduling
+        public class CronJobApplication {
+            public static void main(String[] args) {
+                SpringApplication.run(CronJobApplication.class, args);
+            }
+        }
+
+    2. Creating a Cron Job
+        - Now, create a service class and use @Scheduled to define a cron job.
+
+        @Component
+        public class MyCronJob {
+
+            // Runs every 10 seconds
+            @Scheduled(cron = "*/10 * * * * *")
+            public void executeTask() {
+                System.out.println("Executing task at " + LocalTime.now());
+            }
+        }
+
+    3. Understanding the Cron Expression
+            The cron expression follows this format:
+
+            ┌───────────── second (0-59)
+            │ ┌───────────── minute (0-59)
+            │ │ ┌───────────── hour (0-23)
+            │ │ │ ┌───────────── day of month (1-31)
+            │ │ │ │ ┌───────────── month (1-12)
+            │ │ │ │ │ ┌───────────── day of week (0-7, 0 and 7 = Sunday)
+            │ │ │ │ │ │
+            * * * * * *
+        
+        Expression	           Description
+        0 0 12 * * ?	        Runs at 12 PM every day
+        0 15 10 * * ?	        Runs at 10:15 AM every day
+        0 0/5 * * * ?	        Runs every 5 minutes
+        0 0 0 1 * ?	            Runs at midnight on the 1st of every month
+        */10 * * * * *	        Runs every 10 seconds
+
+    4. Running Cron Jobs Only on Startup
+        -> If you want to run a task only once when the application starts, use @PostConstruct instead of @Scheduled
+
+        @Component
+        public class StartupTask {
+            @PostConstruct
+            public void onStartup() {
+                System.out.println("Application started! Executing startup task...");
+            }
+        }

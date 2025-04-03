@@ -1,0 +1,18 @@
+Email Sender:
+    In Spring Boot, you can send emails using the JavaMailSender interface, which is part of
+    Spring Boot Starter Mail. Here’s a step-by-step guide:
+
+
+    Dependency :
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+    Configurations: 
+        spring.mail.host=smtp.gmail.com
+        spring.mail.port=587
+        spring.mail.username=youremail@gmail.com
+        spring.mail.password=yourpassword
+        spring.mail.properties.mail.smtp.auth=true
+        spring.mail.properties.mail.smtp.starttls.enable=true
