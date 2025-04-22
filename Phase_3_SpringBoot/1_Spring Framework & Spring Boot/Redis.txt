@@ -1,0 +1,37 @@
+Redis :
+    Redis is an in-memory data store that is often used for caching, session management, real-time data, 
+    and pub/sub messaging. In a Spring Boot application, Redis can be integrated using Spring Data Redis. 
+    Here's a step-by-step guide to using Redis in Spring Boot.
+
+
+    1. Add Redis Dependency
+        If you're using Maven, add the following dependency in your pom.xml:            
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+    2. Configure Redis in application.properties
+
+        spring.redis.host=localhost
+        spring.redis.port=6379
+
+    3. Create a Redis Configuration Class
+        Spring Boot automatically configures Redis, but you can customize it if needed.
+
+        @Configuration
+        public class RedisConfig {
+
+            @Bean
+            public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
+                RedisTemplate<String, Object> template = new RedisTemplate<>();
+                template.setConnectionFactory(factory);
+                
+                // Set Key and Value serializers
+                template.setKeySerializer(new StringRedisSerializer());
+                template.setValueSerializer(new GenericJackson2JsonRedisSerializer());
+
+                return template;
+            }
+        }

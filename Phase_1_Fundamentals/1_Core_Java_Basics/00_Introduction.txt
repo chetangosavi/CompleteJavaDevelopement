@@ -1,0 +1,35 @@
+Java :
+
+    Java was created at sun microsystem by james gosling in 1995
+    Its was created as a general purpose Programming langauge Like c c++
+    Its a Object Oriented Programming Language 
+    
+
+    Java Ecosystem :
+
+            Java Card                     --> ATMS
+            Java ME - Micro Edition       --> TVs
+            Java SE - Statndard Edition   --> Standard Usage
+            Java MP - Micro Profile       --> Microservices
+            Java EE - Enterprise Edition  --> Enterprise applications
+
+
+    Java Code Structure :
+
+        Class :
+            basic unit of Code
+            describe data and logic of your Code
+
+        Package:
+            Group of Classes
+            Itermediate logical code aggregation.
+        
+        Module:
+            High level physical code aggregation
+            Group of packages
+
+
+    Class :
+            has methods and properties(variables)
+
+    

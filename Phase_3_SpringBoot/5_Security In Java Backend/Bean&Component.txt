@@ -1,0 +1,28 @@
+What is a @Bean in Spring?
+    + A @Bean is an object that Spring manages for you, like a reusable component you can use anywhere in your project.
+
+
+Think of it like:
+    + "Hey Spring, please create this object only once and make it available wherever I need it."
+
+    Ex:
+        @Configuration
+        public class AppConfig {
+
+            @Bean
+            public PasswordEncoder passwordEncoder() {
+                return new BCryptPasswordEncoder();
+            }
+        }
+
+        What’s happening here?
+        ->  When your app starts, Spring will call passwordEncoder() and store that BCryptPasswordEncoder object.
+            Then you can @Autowired it wherever you want and use it.
+
+What is @Component in Spring?
+    + @Component is an annotation that tells Spring:
+    ->"Hey Spring, this is a class you should manage, create an object of it, and make it available for @Autowired wherever needed."
+
+    In simple terms:
+        @Bean → Used on methods to create a managed object
+        @Component → Used on classes to automatically detect and manage them

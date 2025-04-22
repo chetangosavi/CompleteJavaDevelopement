@@ -1,0 +1,74 @@
+✅ Core Java Learning Roadmap
+1. Java Basics & Setup
+    Introduction to Java
+    Installing JDK and setting up IDE (Eclipse/IntelliJ)
+    Your first Java program (HelloWorld)
+
+2. Java Syntax & Data Types
+    Variables & Data Types
+    Type Casting
+    Operators (Arithmetic, Logical, Relational, etc.)
+
+3. Control Flow Statements
+    If, If-Else
+    Switch Case
+    Loops: for, while, do-while
+    break & continue
+
+4. Methods/Functions in Java
+    Method declaration & calling
+    Method Overloading
+    Pass by value (Java-only behavior)
+
+5. Object-Oriented Programming (OOP) Basics
+    Classes and Objects
+    Constructors (default, parameterized)
+    this keyword
+    Static variables and methods
+
+6. OOP Concepts (Deep Dive)
+    Inheritance
+    Method Overriding
+    super keyword
+    Polymorphism (Compile-time & Runtime)
+    Abstraction (Abstract class & Interface)
+    Encapsulation
+
+7. Access Modifiers
+    public, private, protected, default
+    Use cases and restrictions
+
+8. Arrays
+    1D and 2D Arrays
+    Array operations and common problems
+    Enhanced for-loop
+
+9. Strings and StringBuffer/StringBuilder
+    Immutable String
+    String methods
+    StringBuilder vs StringBuffer
+
+10. Wrapper Classes & Autoboxing
+    int vs Integer
+    Autoboxing/Unboxing concepts
+
+11. Exception Handling
+    try-catch-finally
+    Multiple catch blocks
+    throws and throw
+    Custom exceptions
+
+12. Java Collections (Basics Only)
+    List (ArrayList, LinkedList)
+    Set (HashSet)
+    Map (HashMap)
+    Iterating through collections
+
+13. Basic File Handling
+    Reading and writing files using File, FileReader, FileWriter, BufferedReader
+
+14. Miscellaneous Important Concepts
+    final, static, transient, volatile
+    equals() vs ==
+    hashCode() and toString()
+    Java Memory Management (Stack, Heap basics)
